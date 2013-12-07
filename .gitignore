@@ -2,3 +2,4 @@ node_modules
 .tmp
 .ruby-version
 .ruby-gemset
+dist
