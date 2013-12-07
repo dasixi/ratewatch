@@ -1,15 +1,15 @@
-<h5 class="text-muted">大四喜</h5>
+<h4><a href='#'>大四喜</a> <span class="text-muted small"> (点击表格可看各交易所差价)</span></h4>
 <table class='table table-bordered'>
   <tr>
-    <th></th>
-    <th>Name</th>
+    <th>Diff</th>
+    <th>Exchange</th>
     <th>Last</th>
     <th>Sell</th>
     <th>Buy</th>
     <th>High</th>
     <th>Low</th>
     <th>Vol</th>
-    <th>Seconds</th>
+    <th>Seconds Ago</th>
   </tr>
   <tr ticker-exchange='{{exchangeName}}' exchanges='exchanges' ng-repeat='exchangeName in exchangeNames' ng-click='select(exchangeName)' ng-class='{active: exchanges[exchangeName].selected}'></tr>
 </table>
