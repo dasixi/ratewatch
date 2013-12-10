@@ -13,11 +13,11 @@
     <!-- endbuild -->
 </head>
   <body>
-    <div id='ratewatch' ng-app="ratewatchApp" class="container" ng-view></div>
+    <div id='ratewatch' class="container" data-ng-app="ratewatchApp" data-ng-view></div>
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <div class="panel panel-default">
+          <div class="panel panel-success">
             <div class="panel-heading">
               <h3 class="panel-title">开发中的功能清单</h3>
             </div>
@@ -34,6 +34,12 @@
                 </li>
               </ul>
             </div>
+          </div>
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h3 class="panel-title">BLOG</h3>
+            </div>
+            <div id='blog' class='panel-body'></div>
           </div>
         </div>
         <div class="col-md-6">
@@ -61,6 +67,8 @@
         <script src="scripts/controllers/main.js"></script>
         <!-- endbuild -->
 
+    <script src="bower_components/momentjs/moment.js"></script>
+    <script src="bower_components/momentjs/lang/zh-cn.js"></script>
     <script src="bower_components/moot.zh.min.js"></script>
 </body>
 </html>

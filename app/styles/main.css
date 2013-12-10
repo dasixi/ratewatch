@@ -81,3 +81,6 @@ body {
 #ratewatch {
   font-size: 1.2em;
 }
+#blog blockquote p{
+  font-size: 13px;
+}

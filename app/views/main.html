@@ -1,4 +1,7 @@
-<h4><a href='#'>大四喜</a> <span class="text-muted small"> (点击表格可看各交易所差价)</span></h4>
+<h4>
+  <a href='#'>大四喜</a>
+  <span class="text-muted small"> (点击表格可看各交易所差价)</span>
+</h4>
 <table class='table table-bordered'>
   <tr>
     <th>Diff</th>
@@ -11,5 +14,6 @@
     <th>Vol</th>
     <th>Seconds Ago</th>
   </tr>
-  <tr ticker-exchange='{{exchangeName}}' exchanges='exchanges' ng-repeat='exchangeName in exchangeNames' ng-click='select(exchangeName)' ng-class='{active: exchanges[exchangeName].selected}'></tr>
+  <tr data-ticker-exchange='{{exchangeName}}' data-exchanges='exchanges' data-ng-repeat='exchangeName in exchangeNames'
+    data-ng-click='select(exchangeName)' data-ng-class='{active: exchanges[exchangeName].selected}'></tr>
 </table>
