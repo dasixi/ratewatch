@@ -1,6 +1,12 @@
 <h4>
   <a href='#'>大四喜</a>
-  <span class="text-muted small"> (点击表格可看各交易所差价)</span>
+  <span class="text-muted small"> /点击表格可看各交易所差价 </span>
+  <div class="btn-group">
+    <button type="button" class="btn btn-default" data-ng-class="{active: currency == 'RMB'}" data-ng-click="currency = 'RMB'">RMB</button>
+    <button type="button" class="btn btn-default" data-ng-class="{active: currency == 'USD'}" data-ng-click="currency = 'USD'">USD</button>
+    <button type="button" class="btn btn-default" data-ng-class="{active: currency == 'CAD'}" data-ng-click="currency = 'CAD'">CAD</button>
+  </div>
+  <span class='label label-default'>{{currentRate()}}</span>
 </h4>
 <table class='table table-bordered'>
   <tr>
@@ -14,6 +20,6 @@
     <th>Vol</th>
     <th>Seconds Ago</th>
   </tr>
-  <tr data-ticker-exchange='{{exchangeName}}' data-exchanges='exchanges' data-ng-repeat='exchangeName in exchangeNames'
+  <tr data-currency='{{currency}}' data-ticker-exchange='{{exchangeName}}' data-exchanges='exchanges' data-ng-repeat='exchangeName in exchangeNames'
     data-ng-click='select(exchangeName)' data-ng-class='{active: exchanges[exchangeName].selected}'></tr>
 </table>

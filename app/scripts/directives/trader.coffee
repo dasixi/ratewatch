@@ -1,5 +1,5 @@
 angular.module('ratewatchApp')
-  .directive 'tickerExchange', ['$timeout', '$http', 'DataProcessor', ($timeout, $http, DataProcessor) ->
+  .directive 'tickerExchange', ['$timeout', '$http', 'DataProcessor', 'exchangeFilter', ($timeout, $http, DataProcessor, exchangeFilter) ->
     link = ($scope, $element, $attrs) ->
       timeoutId = null
 
@@ -27,14 +27,15 @@ angular.module('ratewatchApp')
     scope:
       exchangeName: '@tickerExchange'
       exchanges: '='
+      currency: '@'
     template: "
       <td>{{exchange.diffRate}}</td>
       <td>{{exchangeName}}</td>
-      <td>{{exchange.last}}</td>
-      <td>{{exchange.sell}}</td>
-      <td>{{exchange.buy}}</td>
-      <td>{{exchange.high}}</td>
-      <td>{{exchange.low}}</td>
+      <td>{{exchange.last | exchange:currency}}</td>
+      <td>{{exchange.sell | exchange:currency}}</td>
+      <td>{{exchange.buy | exchange:currency}}</td>
+      <td>{{exchange.high | exchange:currency}}</td>
+      <td>{{exchange.low | exchange:currency}}</td>
       <td>{{exchange.vol}}</td>
       <td>{{exchange.seconds}}</td>
     "
