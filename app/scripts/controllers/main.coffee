@@ -2,14 +2,6 @@
 
 angular.module('ratewatchApp')
   .controller 'MainCtrl', ['$scope', ($scope) ->
-    notice = (msg) ->
-      console.log 'begin notice'
-      if (window.webkitNotifications.checkPermission() == 0)
-        window.webkitNotifications.createNotification('icon.png', '$$$', msg)
-      else
-        window.webkitNotifications.requestPermission()
-    notice('hi')
-
     $scope.calculateDiffRate = ->
       for name, exchange of $scope.exchanges
         selected = exchange if exchange.selected
