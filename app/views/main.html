@@ -20,6 +20,9 @@
     <th>Vol</th>
     <th>Seconds Ago</th>
   </tr>
-  <tr data-currency='{{currency}}' data-ticker-exchange='{{exchangeName}}' data-exchanges='exchanges' data-ng-repeat='exchangeName in exchangeNames'
-    data-ng-click='select(exchangeName)' data-ng-class='{active: exchanges[exchangeName].selected}'></tr>
+  <tr data-currency='{{currency}}' data-ticker-exchange='{{exchangeName}}' data-currency-type='bitcoin' data-exchanges='bitcoinExchanges' data-ng-repeat='exchangeName in bitcoinExchangeNames'
+    data-ng-click='select(exchangeName, "bitcoin")' data-ng-class='{active: bitcoinExchanges[exchangeName].selected}'></tr>
+  <tr class='warning'><td></td><td colspan=8>LTC</td><tr>
+  <tr data-currency='{{currency}}' data-ticker-exchange='{{exchangeName}}' data-currency-type='litecoin' data-exchanges='litecoinExchanges' data-ng-repeat='exchangeName in litecoinExchangeNames'
+    data-ng-click='select(exchangeName, "litecoin")' data-ng-class='{active: litecoinExchanges[exchangeName].selected}'></tr>
 </table>
