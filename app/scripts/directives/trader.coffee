@@ -13,7 +13,7 @@ angular.module('ratewatchApp')
 
       updateData = ->
         timeoutId = $timeout ->
-          $http.get("http://127.0.0.1:9292/rate/#{$scope.exchangeName}/#{$scope.currencyType}")
+          $http.get("http://api.7pm.at/rate/#{$scope.exchangeName}/#{$scope.currencyType}")
           .success (data) ->
             selected = $scope.exchange?.selected
             $scope.exchanges[data.name] = $scope.exchange = DataProcessor.processExchange(data)
