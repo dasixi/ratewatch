@@ -19,7 +19,7 @@ angular.module('ratewatchApp')
       for name in names
         exchange = exchanges[name]
         exchange.diffRate = if name isnt selected.name
-          diff = diffByRMB(exchange.last, selected.last)
+          diff = diffByRMB(exchange.buy, selected.sell)
           Math.round(diff * 10000 / toRMB(selected.last)[1]) / 100 + '%, ' + exchangeFilter(['RMB', diff], $scope.currency)
         else
           ""
