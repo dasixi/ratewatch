@@ -13,6 +13,7 @@
     <th>Diff</th>
     <th>Exchange</th>
     <th>Last</th>
+    <th>Spread %</th>
     <th>Sell</th>
     <th>Buy</th>
     <th>High</th>
@@ -22,7 +23,7 @@
   </tr>
   <tr data-currency='{{currency}}' data-ticker-exchange='{{exchangeName}}' data-currency-type='bitcoin' data-exchanges='bitcoinExchanges' data-ng-repeat='exchangeName in bitcoinExchangeNames'
     data-ng-click="select(exchangeName,'bitcoin')" data-ng-class='{active: bitcoinExchanges[exchangeName].selected}'></tr>
-  <tr class='warning'><td></td><td colspan=8>LTC</td><tr>
+  <tr class='warning'><td></td><td colspan=9>LTC</td><tr>
   <tr data-currency='{{currency}}' data-ticker-exchange='{{exchangeName}}' data-currency-type='litecoin' data-exchanges='litecoinExchanges' data-ng-repeat='exchangeName in litecoinExchangeNames'
     data-ng-click="select(exchangeName,'litecoin')" data-ng-class='{active: litecoinExchanges[exchangeName].selected}'></tr>
 </table>

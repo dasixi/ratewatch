@@ -41,6 +41,7 @@ angular.module('ratewatchApp')
       <td>{{exchange.diffRate}}</td>
       <td><a href='{{urls[exchangeName]}}'>{{exchangeName}}</a></td>
       <td>{{exchange.last | exchange:currency}}</td>
+      <td>{{exchange.spread}}</td>
       <td>{{exchange.sell | exchange:currency}}</td>
       <td>{{exchange.buy | exchange:currency}}</td>
       <td>{{exchange.high | exchange:currency}}</td>

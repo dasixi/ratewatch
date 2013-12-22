@@ -7,5 +7,6 @@ angular.module('ratewatchServices', []).factory('DataProcessor', ->
     timestamp = new Date(exchange.time ? exchange.created_at).getTime()
     exchange.seconds  = Math.round((now - timestamp)/1000)
     exchange.vol = Math.round(exchange.vol)
+    exchange.spread = Math.round((exchange.sell[1] - exchange.buy[1]) * 10000 / exchange.buy[1]) / 100
     exchange
 )
