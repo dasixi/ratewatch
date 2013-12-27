@@ -54,7 +54,7 @@ var focus = svg.append("g")
 var context = svg.append("g")
   .attr("transform", "translate(" + margin2.left + "," + margin2.top + ")");
 
-d3.csv("onehour.csv", function(error, data) {
+d3.csv("data/onehour.csv", function(error, data) {
   color.domain(d3.keys(data[0]).filter(function(key) { return key !== "date"; }));
 
   data.forEach(function(d) {
